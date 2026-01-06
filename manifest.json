@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Open In New Tab",
+  "description": "Force links on selected sites to open in a new (foreground or background) tab.",
+  "version": "1.0",
+  "icons": {
+    "48":"Icons/Icon48.png",
+	"64":"Icons/Icon64.png",
+    "128":"Icons/Icon128.png"
+  },
+
+    "permissions": [
+    "scripting",
+    "storage",
+    "tabs"
+  ],
+
+
+  "host_permissions": [
+    "<all_urls>"
+  ],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icons/icon48.png"
+    }
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  }
+}

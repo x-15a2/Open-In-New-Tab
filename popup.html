@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: sans-serif;
+      width: 250px;
+      padding: 5px 10px 10px 10px;   /* top padding reduced */
+    }
+
+    /* ---------- Header row ---------- */
+    .header {
+      display: flex;                /* place children in a row */
+      align-items: center;          /* vertical centering */
+      justify-content: space-between; /* push items to opposite edges */
+      margin: 0;                    /* remove default margins */
+    }
+
+    h2 {
+      margin: 0;                    /* no extra space around the heading */
+      font-size: 1.2em;
+    }
+
+    label {
+      display: block;
+      margin-top: 8px;
+    }
+
+    button {
+      margin-top: 12px;
+      padding: 6px 12px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header: text on the left, icon on the right -->
+  <div class="header">
+    <h2>Open In New Tab</h2>
+    <img src="Icons/Icon48.png" alt="Extension icon" width="48" height="48">
+  </div>
+
+  <label>
+    <input type="checkbox" id="siteToggle">
+    Enable for this site
+  </label>
+
+  <label>
+    <input type="radio" name="mode" value="foreground" id="foreground">
+    Open in foreground tab
+  </label>
+
+  <label>
+    <input type="radio" name="mode" value="background" id="background">
+    Open in background tab
+  </label>
+
+  <br>
+  <button id="refreshBtn">Refresh this page</button> <br>
+  (Only needed when first enabling new site)
+
+  <script src="popup.js"></script>
+</body>
+</html>
